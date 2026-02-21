@@ -1,0 +1,36 @@
+/* Ensure the page has no default padding or margin */
+body {
+  margin: 0;
+  padding: 0;
+}
+img{
+
+    height: 100px;
+    width: 100px;
+}
+/* Make the scroll-wrapper stick to the top of the screen */
+.scroll-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden; /* Hide any overflow outside the viewport */
+}
+
+/* The panel for the image */
+.horizontal-panel {
+  width: 100%;
+  height: 100%;
+}
+
+/* The long image that will be moved horizontally */
+.scrolling-image {
+  height: 100%; /* Keep the image height within the viewport */
+  object-fit: contain; /* Ensure the image content is visible */
+  transform: translateX(0); /* Default position */
+  will-change: transform; /* Hint to the browser for performance */
+}
+
+/* This creates the vertical scroll space for the animation to occur */
+.scroll-spacer {
+  height: 3000px; /* Make this as tall as needed to reveal the full image */
+}
